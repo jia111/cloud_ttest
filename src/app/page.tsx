@@ -10,7 +10,7 @@ export default async function Home() {
   let posts: any
 
   try {
-    const res = await axios.get(`http://w2a.auth.la/info`)
+    const res = await axios.get(`https://w2a.auth.la/info`)
     posts = res?.data?.data
   } catch (error) {
 
