@@ -1,16 +1,15 @@
 {
-  "name": "mymy",
+  "name": "next-app-1",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3100",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "pages:build": "npx @cloudflare/next-on-pages",
     "preview": "npm run pages:build && wrangler pages dev",
-    "deploy": "npm run pages:build && wrangler pages deploy",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv env.d.ts"
+    "deploy": "npm run pages:build && wrangler pages deploy"
   },
   "dependencies": {
     "next": "14.2.5",
@@ -27,7 +26,6 @@
     "eslint-config-next": "14.2.5",
     "eslint-plugin-next-on-pages": "^1.13.2",
     "typescript": "^5",
-    "vercel": "^37.1.2",
-    "wrangler": "^3.57.1"
+    "wrangler": "^3.72.3"
   }
 }
