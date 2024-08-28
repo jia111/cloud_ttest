@@ -24,7 +24,7 @@ export default async function Home() {
       <div>名字：{posts?.name}</div>
       <div style={{ position: 'relative', height: 192, width: 192 }}>ICON：<Image src={posts?.desktop_icon?.src} alt="Icon" layout="fill" /></div>
       <div>图片：</div>
-      {posts?.screenshot?.map((item: any, i: number) => <div style={{ position: 'relative', height: 587, width: 330 }}> <Image key={i} src={item?.src} alt="Icon" layout="fill" /></div>)}
+      {posts?.screenshot?.map((item: any, i: number) => <div key={i} style={{ position: 'relative', height: 587, width: 330 }}> <Image src={item?.src} alt="Icon" layout="fill" /></div>)}
     </>
   )
 }
