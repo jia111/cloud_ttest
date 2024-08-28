@@ -23,7 +23,7 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
-export function Posts() {
+export default function Home() {
   const [posts, setPosts] = useState(null)
 
   useEffect(() => {
