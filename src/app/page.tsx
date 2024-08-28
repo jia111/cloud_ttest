@@ -4,7 +4,7 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 
-// export const runtime = "edge";
+export const runtime = "edge";
 // export default async function Home() {
 //   let posts: any
 //   try {
