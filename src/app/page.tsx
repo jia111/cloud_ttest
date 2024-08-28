@@ -1,19 +1,48 @@
-import { useEffect } from 'react'
-import styles from './page.module.css'
-export const runtime = "edge";
-export default async function Home() {
-  const res = await fetch(`https://w2a.auth.la/info`)
-  const resData: any = await res.json()
+// import { useEffect } from 'react'
+// import styles from './page.module.css'
+// export const runtime = "edge";
+// export default async function Home() {
+//   const res = await fetch(`https://w2a.auth.la/info`)
+//   const resData: any = await res.json()
 
-  if (!resData?.data) {
-    return <>还没有数据哟</>
-  }
+//   if (!posts) {
+//     return <>还没有数据哟</>
+//   }
+//   return (
+//     <>
+//       <div>名字：{posts?.name}</div>
+//       <div>ICON：<img src={posts?.desktop_icon?.src} /></div>
+//       <div>图片：</div>
+//       {posts?.screenshot?.map((item: any, i: number) => <img key={i} src={item.src} />)}
+//     </>
+//   )
+// }
+
+
+'use client'
+
+import { useState, useEffect } from 'react'
+
+export function Posts() {
+  const [posts, setPosts] = useState(null)
+
+  useEffect(() => {
+    async function fetchPosts() {
+      const res = await fetch(`https://w2a.auth.la/info`)
+      let data = await res.json()
+      setPosts(data.data)
+    }
+    fetchPosts()
+  }, [])
+
+  if (!posts) return <div>Loading...</div>
+
   return (
     <>
-      <div>名字：{resData?.data?.name}</div>
-      <div>ICON：<img src={resData?.data?.desktop_icon?.src} /></div>
+      <div>名字：{posts?.name}</div>
+      <div>ICON：<img src={posts?.desktop_icon?.src} /></div>
       <div>图片：</div>
-      {resData?.data?.screenshot?.map((item: any, i: number) => <img key={i} src={item.src} />)}
+      {posts?.screenshot?.map((item: any, i: number) => <img key={i} src={item.src} />)}
     </>
   )
 }
