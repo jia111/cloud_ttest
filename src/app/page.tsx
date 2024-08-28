@@ -29,8 +29,8 @@ export default function Home() {
   useEffect(() => {
     async function fetchPosts() {
       const res = await fetch(`https://w2a.auth.la/info`)
-      let data = await res.json()
-      setPosts(data.data)
+      let data: any = await res.json()
+      setPosts(data?.data)
     }
     fetchPosts()
   }, [])
