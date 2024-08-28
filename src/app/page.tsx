@@ -24,7 +24,7 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 export default function Home() {
-  const [posts, setPosts] = useState(null)
+  const [posts, setPosts] = useState<any>(null)
 
   useEffect(() => {
     async function fetchPosts() {
