@@ -1,5 +1,5 @@
 {
-  "name": "next-app-1",
+  "name": "next-project",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,7 +12,7 @@
     "deploy": "npm run pages:build && wrangler pages deploy"
   },
   "dependencies": {
-    "next": "14.2.5",
+    "next": "14.2.6",
     "react": "^18",
     "react-dom": "^18"
   },
@@ -23,9 +23,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "14.2.5",
-    "eslint-plugin-next-on-pages": "^1.13.2",
-    "typescript": "^5",
-    "wrangler": "^3.72.3"
+    "eslint-config-next": "14.2.6",
+    "typescript": "^5"
   }
 }
