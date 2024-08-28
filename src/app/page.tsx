@@ -2,7 +2,7 @@
 
 // 'use client'
 import { useState, useEffect } from 'react'
-import fetch from 'node-fetch';
+import axios from 'axios';
 import Image from 'next/image'
 
 export const runtime = "edge";
@@ -10,9 +10,8 @@ export default async function Home() {
   let posts: any
   try {
 
-    const res = await fetch(`https://w2a.auth.la/info`)
-    const resData: any = await res.json()
-    posts = resData.data
+    const res = await axios.get(`https://w2a.auth.la/info`)
+    posts = res.data
   } catch (error) {
 
   }
