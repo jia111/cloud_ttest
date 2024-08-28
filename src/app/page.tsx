@@ -8,11 +8,10 @@ import Image from 'next/image'
 // export const runtime = "edge";
 export default async function Home() {
   let posts: any
-  const res = await axios.get(`http://w2a.auth.la/info`)
-  console.log(res.data.data)
-  posts = res.data.data
-  try {
 
+  try {
+    const res = await axios.get(`http://w2a.auth.la/info`)
+    posts = res?.data?.data
   } catch (error) {
 
   }
