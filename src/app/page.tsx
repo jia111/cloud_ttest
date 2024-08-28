@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios';
 import Image from 'next/image'
 
-// export const runtime = "edge";
+export const runtime = "edge";
 export default async function Home() {
   let posts: any
 
