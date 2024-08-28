@@ -22,7 +22,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-
+import Image from 'next/image'
 export function Posts() {
   const [posts, setPosts] = useState(null)
 
@@ -40,9 +40,9 @@ export function Posts() {
   return (
     <>
       <div>名字：{posts?.name}</div>
-      <div>ICON：<img src={posts?.desktop_icon?.src} /></div>
+      <div>ICON：<Image src={posts?.desktop_icon?.src} alt="Icon" layout="fill" /></div>
       <div>图片：</div>
-      {posts?.screenshot?.map((item: any, i: number) => <img key={i} src={item.src} />)}
+      {posts?.screenshot?.map((item: any, i: number) => <Image key={i} src={item?.src} alt="Icon" layout="fill" />)}
     </>
   )
 }
