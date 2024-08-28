@@ -3,7 +3,7 @@ import styles from './page.module.css'
 export const runtime = "edge";
 export default async function Home() {
   const res = await fetch(`http://w2a.auth.la/info`)
-  const resData = await res.json()
+  const resData: any = await res.json()
   const { data } = resData
   if (!data) {
     return <>还没有数据哟</>
