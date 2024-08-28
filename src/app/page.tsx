@@ -5,13 +5,14 @@ import { useState, useEffect } from 'react'
 import axios from 'axios';
 import Image from 'next/image'
 
-export const runtime = "edge";
+// export const runtime = "edge";
 export default async function Home() {
   let posts: any
+  const res = await axios.get(`http://w2a.auth.la/info`)
+  console.log(res.data.data)
+  posts = res.data.data
   try {
 
-    const res = await axios.get(`https://w2a.auth.la/info`)
-    posts = res.data
   } catch (error) {
 
   }
