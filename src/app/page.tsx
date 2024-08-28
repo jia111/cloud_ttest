@@ -18,6 +18,7 @@ export default async function Home() {
   if (!posts) {
     return <>还没有数据哟</>
   }
+
   return (
     <>
       <div>名字：{posts?.name}</div>
