@@ -2,6 +2,7 @@
 
 // 'use client'
 import { useState, useEffect } from 'react'
+import fetch from 'node-fetch';
 import Image from 'next/image'
 
 export const runtime = "edge";
