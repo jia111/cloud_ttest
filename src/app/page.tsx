@@ -9,7 +9,7 @@ export const runtime = "edge";
 export default async function Home() {
   let posts: any
 
-  const res = await axios.get(`https://w2a.auth.la/info`)
+  const res = await axios.get(`https://w2a.w2.app/info`)
   posts = res?.data?.data
   try {
   } catch (error) {
